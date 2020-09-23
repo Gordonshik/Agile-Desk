@@ -1,58 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./header/Header.jsx";
+import Column from "./column/Column.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    tasksArray: [],
+    todoArray: [{
+      title: "Сделать Agile Desk",
+    description: "Ну короче сделать улыбочку ХЫЫЫЫЫЫЫЫЫ",
+    startAt: "",
+    finishAt: "",
+    step: "1",
+    priority: ""
+  }],
+    doesArray: [],
+    reviewingArray: [],
+    reviewedArray: [],
+    mergedArray: [],
+    task: {
+      title: "",
+      description: "",
+      startAt: "",
+      finishAt: "",
+      step: "",
+      priority: "",
+    },
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Column
+          tasks={this.state.tasksArray}
+          todo={this.state.todoArray}
+          does={this.state.doesArray}
+          reviewing={this.state.reviewingArray}
+          reviewed={this.state.reviewedArray}
+          merged={this.state.mergedArray}
+        />
+      </div>
+    );
+  }
 }
-
-export default App;
