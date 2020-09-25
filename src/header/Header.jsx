@@ -4,7 +4,7 @@ import './Header.css'
 
 export default function header() {
     return (
-        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+        <nav class="navbar navbar-expand-sm navbar-light border-dark mb-3">
         <div class="container">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
