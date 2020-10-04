@@ -1,33 +1,33 @@
 import React from 'react'
-import './Header.css'
+import './Header.scss'
 
 
 export default function header() {
     return (
-        <nav class="navbar navbar-expand-sm navbar-light border-dark mb-3">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
+        <nav className="navbar navbar-expand-sm navbar-light border-dark mb-3">
+            <div className="container">
+                <a className="navbar-brand" href="#">Agile Desk</a>
+                <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">About</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Services</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     )
 }
 
