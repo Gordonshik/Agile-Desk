@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./header/Header.jsx";
-import Columns from "./columns/Columns.jsx";
+import Header from "./components/Header/Header.jsx";
+import Columns from "./components/Columns/Columns.jsx";
+import Description from './components/Description/Description.jsx'
 
 export default class App extends Component {
  
@@ -9,7 +10,7 @@ export default class App extends Component {
     return (
       <div className="app">
         <Header />
-        <Columns />
+        <Description />
       </div>
     );
   }
